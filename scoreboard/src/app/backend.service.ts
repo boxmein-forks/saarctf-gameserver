@@ -61,7 +61,8 @@ export class BackendService {
 					}
 					for (let service of json.services) {
 						for (let i = old_firstbloods[service.name]; i < service.first_blood.length; i++) {
-							this.eventNotifications.next(['firstblood', service.name, service.first_blood[i]]);
+							let team = this.teams[service.first_blood[i]].name;
+							this.eventNotifications.next(['firstblood', service.name, team]);
 						}
 					}
 					// check for "final" notifications

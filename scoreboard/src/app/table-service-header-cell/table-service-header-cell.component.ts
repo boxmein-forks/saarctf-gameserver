@@ -1,4 +1,5 @@
 import {Component, Input, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
+import {BackendService} from "../backend.service";
 import {Service} from "../models";
 
 @Component({
@@ -12,11 +13,15 @@ export class TableServiceHeaderCellComponent implements OnInit {
 
 	@ViewChild('template', {static: true}) template;
 
-	constructor(private viewContainerRef: ViewContainerRef) {
+	constructor(public backend: BackendService, private viewContainerRef: ViewContainerRef) {
 	}
 
 	ngOnInit(): void {
 		this.viewContainerRef.createEmbeddedView(this.template);
+	}
+
+	firstBloodNames(service: Service): string {
+		return service.first_blood.map(team_id => this.backend.teams[team_id].name).join(', ')
 	}
 
 	indexTrack(index, item) {

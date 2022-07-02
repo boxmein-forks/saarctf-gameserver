@@ -2,7 +2,7 @@ export interface Service {
 	name: string;
 	attackers: number;
 	victims: number;
-	first_blood: Array<string>;
+	first_blood: Array<number>;
 	flag_stores: number;
 	flag_stores_exploited: number;
 }
