@@ -8,8 +8,8 @@ import {retryWithBackoff} from "./retryWithBackoff";
 
 export enum GameStates {
 	STOPPED = 1,
-	SUSPENDED = 2,
-	RUNNING = 3
+	SUSPENDED = 99,
+	RUNNING = 0
 }
 
 interface CurrentStateJson {

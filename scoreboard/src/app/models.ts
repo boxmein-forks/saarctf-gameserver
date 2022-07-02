@@ -26,8 +26,8 @@ export interface ServiceResult {
 	cap: number; // captured
 	dst: number; // delta stolen
 	dcap: number; // delta captured
-	c: string; // checker status
-	dc: Array<string>; // old checker results (round-1, -2, -3, ...)
+	c: number; // checker status
+	dc: Array<number>; // old checker results (round-1, -2, -3, ...)
 	m: string | null; // checker message
 }
 

@@ -25,59 +25,50 @@ export class TableLineCellsComponent implements OnInit {
 		return index;
 	}
 
-	statusToClass(status: string): string {
+	statusToClass(status: number): string {
 		switch (status) {
-			case 'SUCCESS':
+			case 0: // up
 				return 'label-success';
-			case 'FLAGMISSING':
-			case 'MUMBLE':
-				return 'label-warning';
-			case 'OFFLINE':
-			case 'TIMEOUT':
-			case 'CRASH':
+			case 1: // faulty
+			case 2: // down
+			case 3: // flag not found
 				return 'label-danger';
-			case 'REVOKED':
-			case 'PENDING':
+			case 4: // recovering
+				return 'label-warning';
 			default:
 				return 'label-default';
 		}
 	}
 
-	statusToTooltip(status: string): string {
+	statusToTooltip(status: number): string {
 		switch (status) {
-			case 'SUCCESS':
+			case 0:
 				return 'Service online';
-			case 'FLAGMISSING':
-				return 'No flag found';
-			case 'MUMBLE':
-				return 'Mumble';
-			case 'OFFLINE':
-			case 'TIMEOUT':
+			case 1:
 				return 'Service unreachable';
-			case 'CRASH':
-				return 'Checker crashed';
-			case 'REVOKED':
-			case 'PENDING':
-				return 'Not checked';
+			case 2:
+				return 'Service faulty';
+			case 3:
+				return 'No flag found';
+			case 4:
+				return 'Recovering';
 			default:
-				return status;
+				return 'unkown';
 		}
 	}
 
-	statusToText(status: string): string {
+	statusToText(status: number): string {
 		switch (status) {
-			case 'SUCCESS':
+			case 0:
 				return 'up';
-			case 'FLAGMISSING':
-				return 'flag';
-			case 'MUMBLE':
-				return 'mumble';
-			case 'OFFLINE':
-			case 'TIMEOUT':
+			case 1:
 				return 'down';
-			case 'CRASH':
-			case 'REVOKED':
-			case 'PENDING':
+			case 2:
+				return 'faulty';
+			case 3:
+				return 'flag';
+			case 4:
+				return 'recover';
 			default:
 				return '-';
 		}
