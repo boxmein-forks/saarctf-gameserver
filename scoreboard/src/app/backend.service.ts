@@ -30,7 +30,7 @@ interface CurrentStateJson {
 })
 export class BackendService {
 
-	private readonly url_base = 'api/';
+	private readonly url_base = '/competition/scoreboard-v2/';
 	//private readonly url_base = 'http://localhost/scoreboard-api/api/';
 
 	public teams: { [key: number]: Team } = {};

@@ -27,7 +27,7 @@
 			<td class="teamcell">
 				<div class="media-left team-logo-media" *ngIf="ui.showImages">
 					<a [routerLink]="['team', rank.team_id]">
-						<img class="media-object" [src]="'logos/'+backend.teams[rank.team_id].logo" alt="" loading="lazy">
+						<img class="media-object" [src]="backend.teams[rank.team_id].logo" alt="" loading="lazy">
 					</a>
 				</div>
 				<div class="media-body">

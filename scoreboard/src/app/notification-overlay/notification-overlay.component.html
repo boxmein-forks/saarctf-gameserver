@@ -25,7 +25,7 @@
 			<tr *ngFor="let teaminfo of topTeams; let i = index">
 				<td>{{i + 1}}.</td>
 				<td>
-					<img class="media-object" [src]="'logos/'+teaminfo[0].logo" alt="" loading="lazy">
+					<img class="media-object" [src]="teaminfo[0].logo" alt="" loading="lazy">
 				</td>
 				<td><strong>{{teaminfo[0].name}}</strong></td>
 				<td><small>{{teaminfo[1].toFixed(1)}} points</small></td>
