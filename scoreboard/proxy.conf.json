@@ -1,10 +1,14 @@
 {
-  "/api/": {
-	  "target": "http://127.0.0.19/scoreboard-api/",
-	  "secure": false
+  "/competition/": {
+	  "target": "http://localhost:8000/",
+	  "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
   },
-  "/logos/": {
-	  "target": "http://127.0.0.19/scoreboard-api/",
-	  "secure": false
+  "/uploads/": {
+	  "target": "https://2021.faustctf.net/",
+	  "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 }
