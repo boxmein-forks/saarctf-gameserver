@@ -11,7 +11,7 @@ export interface Team {
 	name: string;
 	vulnbox: string;
 	aff: string;
-	web: string;
+	country: string;
 	logo: string;
 }
 
