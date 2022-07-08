@@ -20,8 +20,8 @@
 	</tr>
 	</thead>
 	<tbody>
-	<ng-container *ngFor="let rank of info.scoreboard; trackBy: teamTrackBy">
-		<tr *ngIf="backend.teams[rank.team_id]">
+	<ng-container *ngFor="let rank of info.scoreboard; let i = index; trackBy: teamTrackBy">
+		<tr *ngIf="backend.teams[rank.team_id] && i < dummyRowStart">
 			<!-- Team row -->
 			<td class="rankcell"><h4>{{rank.rank}}</h4></td>
 			<td class="teamcell">
@@ -50,6 +50,7 @@
 
 			<tablelinecells [rank]="rank" [tick]="info.tick"></tablelinecells>
 		</tr>
+		<tr class="dummyrow" *ngIf="!backend.teams[rank.team_id] || i >= dummyRowStart"></tr>
 	</ng-container>
 	</tbody>
 </table>
