@@ -17,11 +17,6 @@
 			<div class="media-body">
 				<h4 class="team-name" *ngIf="backend.teams[teamId]">
 					{{backend.teams[teamId].name}}
-					<button type="button" *ngIf="backend.teams[teamId].aff || backend.teams[teamId].country"
-							class="btn btn-xs btn-link info-link" triggers="focus"
-							[popover]="'Affiliation: '+(backend.teams[teamId].aff||'-')+'; Country: '+(backend.teams[teamId].country || '-')">
-						<span class="fas fa-info"></span>
-					</button>
 				</h4>
 				<span class="team-vulnbox" *ngIf="backend.teams[teamId]">{{backend.teams[teamId].vulnbox}}</span><br>
 				<span *ngIf="currentTick === null || currentRoundInfo === null || loading > 0" class="fas fa-spinner fa-spin"></span>

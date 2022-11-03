@@ -33,12 +33,6 @@
 				<div class="media-body">
 					<h4 class="team-name" [class.blocked]="backend.bannedTeams[rank.team_id]">
 						<a [routerLink]="['team', rank.team_id]" [title]="backend.teams[rank.team_id].name + ' - See team\'s details'">{{backend.teams[rank.team_id].name}}</a>
-						<button type="button" *ngIf="backend.teams[rank.team_id].aff || backend.teams[rank.team_id].country"
-								class="btn btn-xs btn-link info-link" triggers="focus"
-								container="div.container-fluid.flexible-container"
-								[popover]="'Affiliation: '+(backend.teams[rank.team_id].aff||'-')+'; Country: '+(backend.teams[rank.team_id].country || '-')">
-							<span class="fas fa-info"></span>
-						</button>
 					</h4>
 					<span class="team-vulnbox">{{backend.teams[rank.team_id].vulnbox}}</span><br>
 					<span class="team-total-points">

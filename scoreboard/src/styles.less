@@ -56,12 +56,13 @@
 @import "~@fortawesome/fontawesome-free/less/solid.less";
 
 @import "darkmode.less";
+@import "ecsc.less";
 
 
 .bg-primary-theme {
 	color: #fff;
-	.bg-variant(@brand-primary);
-	#gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
+	.bg-variant(@navbar-inverse-bg);
+	//#gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
 }
 
 a.href {
@@ -165,4 +166,8 @@ app-scoretable > table.table-bordered.table-stickyhead {
 		1px 0px 1px 0px rgba(0, 0, 0, 0.14),
 		1px 0px 3px 0px rgba(0, 0, 0, 0.12);
 	}
+}
+
+.popover-body {
+	white-space: pre-wrap;
 }

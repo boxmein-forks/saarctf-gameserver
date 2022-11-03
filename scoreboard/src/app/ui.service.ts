@@ -19,7 +19,8 @@ export class UiService {
 	@SessionStorage({key: 'showNotifications'})
 	public showNotifications: boolean = true;
 	@SessionStorage({key: 'darkmode'})
-	public darkmode: boolean = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+	public darkmode: boolean = true;
+	//public darkmode: boolean = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 	public darkmodeChanges = new Subject<boolean>();
 
 	constructor() {

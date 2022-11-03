@@ -87,6 +87,8 @@ export class PageTeamComponent implements OnInit, OnDestroy {
 	constructor(public backend: BackendService, public ui: UiService, private route: ActivatedRoute) {
 		if (ui.darkmode)
 			this.setGraphDarkMode(true);
+
+		this.setCurrentTick(this.backend.newestScoreboardTick.value);
 	}
 
 	ngOnInit(): void {

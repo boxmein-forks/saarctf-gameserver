@@ -32,7 +32,7 @@ p {
 }
 
 .result-container {
-	grid-template-columns: @line-height-computed max-content max-content calc(@line-height-computed + @result-grid-gap-large) max-content max-content;
+	grid-template-columns: @line-height-computed max-content max-content calc(@line-height-computed + @result-grid-gap-large) 28px 28px max-content;
 
 	> .offset-left {
 		margin-left: @result-grid-gap-large;
@@ -43,7 +43,7 @@ p {
 	}
 
 	> .sla-col {
-		grid-column: 4 / span 3;
+		grid-column: 4 / span 4;
 		vertical-align: middle;
 		white-space: nowrap;
 
@@ -56,7 +56,7 @@ p {
 		}
 
 		.info-link {
-			margin-left: 5px;
+			margin: -0.5px 0px -5px 5px;
 			float: right;
 		}
 

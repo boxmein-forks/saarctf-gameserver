@@ -1,12 +1,12 @@
 {
   "/competition/": {
-	  "target": "http://localhost:8000/",
+	  "target": "http://localhost:5000/",
 	  "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
   },
   "/uploads/": {
-	  "target": "https://2021.faustctf.net/",
+	  "target": "http://0.0.0.0:5000/",
 	  "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"

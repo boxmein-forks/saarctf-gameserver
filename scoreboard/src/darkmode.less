@@ -54,6 +54,15 @@ html.dark {
 				border-bottom-color: @dm-popover-arrow-color;
 			}
 		}
+
+		&.top > .arrow {
+			border-top-color: @dm-popover-arrow-outer-color;
+
+			&:after {
+				border-top-color: @dm-popover-arrow-color;
+			}
+		}
+
 	}
 
 	.popover-title {
@@ -103,8 +112,8 @@ html.dark {
 	// Primary header
 	.bg-primary-theme {
 		color: #fff;
-		.bg-variant(darken(@brand-primary, 10%));
-		#gradient > .vertical(@start-color: darken(@navbar-inverse-bg, 5%); @end-color: darken(@navbar-inverse-bg, 15%));
+		.bg-variant(darken(@navbar-inverse-bg, 10%));
+		// #gradient > .vertical(@start-color: darken(@navbar-inverse-bg, 5%); @end-color: darken(@navbar-inverse-bg, 15%));
 	}
 
 	// Dark sticky headers
