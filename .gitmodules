@@ -1,3 +1,0 @@
-[submodule "gamelib"]
-	path = gamelib
-	url = ../saarctf-gamelib.git
