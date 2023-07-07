@@ -1,15 +1,5 @@
 // custom styles
 
-// fonts
-@font-face {
-    font-family: 'Sector 017';
-    src: url('/assets/fonts/Sector-017.woff2') format('woff2'),
-         url('/assets/fonts/Sector-017.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* latin-ext */
 @font-face {
     font-family: 'Titillium Web';
@@ -49,8 +39,9 @@
   }
 
 .page-header {
-	font-family: "Sector 017", Arial, sans-serif;
+	font-family: Arial, sans-serif;
     padding: 0;
+    line-height: 2em;
     border-bottom: 0;
     margin-bottom: 15px;
 }
@@ -96,14 +87,11 @@ h1.page-header img {
 
 body {
     font-family: 'Titillium Web', sans-serif;
-    background: url('/assets/img/sky.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
+    background: #2f499d;
 }
 
 html.dark .table {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #1a2857;
 }
 
 html.dark .table > tbody > tr > td {
